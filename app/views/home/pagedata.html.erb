@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<% @pages.each do |page| %>
+<div style="border: 1px solid #ccc;
+box-shadow: 3px 3px 2px #ccc;
+transition: 0.5s; padding: 5%; color: rgb(33, 135, 231); padding-top: 0%; width: 80%; margin-top: 5%; margin-left: 10%; background-color: white;">
+<h2 style="text-align: center; color: rgb(33, 135, 231)"><%= page.title %></h2>
+<h3 style="text-align: center; color: rgb(33, 135, 231)"><%= page.pagetitle %></h3></br></br>
+<p float= "left" style="color: rgb(33, 135, 231)"><b>Keywords: </b><%= page.keywords %></p></br>
+<h4><b>Meta Description</b></h4>
+<p style="color: rgb(33, 135, 231)"><%= page.metadescription %></p></br>
+<p><%= page.description %></p></br>
+    <%= link_to image_tag(page.image, style: 'width: 100%')%>
+
+    </div>
+    <% end %>
+    </body>
+    </html>

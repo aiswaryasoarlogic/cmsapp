@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<div style="border: 1px solid #ccc;
+box-shadow: 3px 3px 2px #ccc;
+transition: 0.5s; padding: 5%; padding-top: 0%; width: 80%; margin-top: 5%; margin-left: 10%; background-color: white;">
+<h2 style="text-align: center; color: rgb(33, 135, 231)">List Page</h2>
+<table class="table table-striped custab" style="color: blue; width: 100%;  ">
+<thead>
+<tr>
+<th style="width: 40%; color:rgb(33, 135, 231)">Page Title</th>
+<th style="width: 30%; color:rgb(33, 135, 231)">Add subpages</th>
+
+</tr>
+</thead>
+<tbody>
+<% @pages.each do |page| %>
+    <tr>
+        
+        <td >
+        <a href="/pagedata?pageid=<%= page.id %>&keywords=<%= page.keywords %>&metadata=<%= page.metadescription %>"><%= page.title %></a>
+        </td>
+        <td>
+        <button><a style = " color: blue" id = "link" href="/subpage?pageid=<%= page.id %>">Add</a></button>
+        </td>
+        <td>
+
+        
+       
+    </tr>
+    <% end %>
+    </tbody>
+    </table>
+    </div>
+    </body>
+    </html>
