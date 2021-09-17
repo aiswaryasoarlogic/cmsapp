@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/listpage", to: "home#listpage"
   get "/pagedata", to: "home#pagedata"
   post "/home", to: "home#create"
+  get "/edit", to: "home#edit"
   post "/subpage", to: "home#createsubpage"
 
   get "password/reset", to: "password_resets#new"

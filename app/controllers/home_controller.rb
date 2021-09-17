@@ -6,6 +6,12 @@ class HomeController < ApplicationController
         @pages = Userpage.where(userid: session[:user_id])
     end
 
+    def edit
+       
+        @user = User.find(session[:user_id])
+        @pages = Userpage.where(userid: session[:user_id])
+    end
+
     def admin
         @alluser = User.all
         @user = User.find(session[:user_id])
