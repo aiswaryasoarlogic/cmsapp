@@ -23,13 +23,18 @@ default: &default
   # username: blzzpwrnynlkrq
   # password: '1c8e271503df2ae5d9d53e60e280126991bd09296c7f8dc1e5e2048471522d61'
   # host: ec2-3-213-146-52.compute-1.amazonaws.com
-  username: postgres
-  password: '1234'
-  host: localhost
+  # username: postgres
+  # password: '1234'
+  # host: localhost
+
+  username: symhydqarzkuyl
+  password: '940f5723d08ba42fb47b43a3fa6eb99ccc9b2523e5d4c406ee3d07c22cb74df9'
+  host: ec2-54-146-84-101.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: myrubyapp_development
+  # database: myrubyapp_development
+  database: d1rbht0du302oq
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
